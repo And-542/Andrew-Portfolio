@@ -46,3 +46,155 @@ nav a:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(157, 0, 255, 0.3);
 }
+/* ===== ABOUT ME BOX ===== */
+.about-box {
+    width: 80%;
+    max-width: 800px;
+    margin: 3rem auto;
+    border: 1px solid var(--neon-purple);
+    box-shadow: 0 0 20px rgba(157, 0, 255, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.terminal-header {
+    background: var(--darker-bg);
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--terminal-border);
+}
+
+.terminal-btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.terminal-btn.red { background: #ff5f56; }
+.terminal-btn.yellow { background: #ffbd2e; }
+.terminal-btn.green { background: #27c93f; }
+
+.terminal-title {
+    margin-left: 10px;
+    color: var(--neon-cyan);
+    font-size: 0.9rem;
+}
+
+.about-content {
+    padding: 2rem;
+    background: rgba(13, 2, 33, 0.7);
+    min-height: 300px;
+}
+
+.about-content h2 {
+    color: var(--neon-purple);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.about-content p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.about-content ul {
+    margin: 1rem 0 0 1.5rem;
+}
+
+.about-content li {
+    margin-bottom: 0.5rem;
+    color: var(--neon-cyan);
+}
+
+.terminal-footer {
+    height: 10px;
+    background: linear-gradient(90deg, var(--neon-purple), var(--neon-cyan));
+}
+
+/* Typewriter effect for the content */
+.typewriter p {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end);
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+/* ===== DANGER BUTTON ===== */
+.btn-trap {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #ff0000, #ff00aa);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 0 20px #ff0000, 
+                0 0 40px #ff00aa;
+    animation: pulse 2s infinite;
+}
+
+.btn-trap:hover {
+    animation: pulse 0.5s infinite, glitch 0.2s infinite;
+}
+
+/* ===== CRASH SCREEN ===== */
+.crash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Courier New', monospace;
+}
+
+.crash-message {
+    text-align: center;
+    animation: glitch 1s linear infinite;
+}
+
+.crash-message h1 {
+    color: #ff0000;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+.crash-code {
+    color: #00ff00;
+    margin-top: 2rem;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-5px, 5px); }
+    40% { transform: translate(-5px, -5px); }
+    60% { transform: translate(5px, 5px); }
+    80% { transform: translate(5px, -5px); }
+    100% { transform: translate(0); }
+}
+
+@keyframes pulse {
+    0% { opacity: 0.8; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+    100% { opacity: 0.8; transform: scale(1); }
+}
