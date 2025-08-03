@@ -9,7 +9,7 @@ function typeWriter() {
     }
 }
 
-// Danger Button Functionality
+
 // Danger Button Functionality
 document.getElementById('trap-btn').addEventListener('click', function() {
     const crashScreen = document.getElementById('crash-screen');
