@@ -3,82 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andrew Varghese Koshy | CIPHER_GH0ST</title>
+    <title>Andrew Koshy | CIPHER_GH0ST</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navbar -->
     <header>
         <div class="logo">CIPHER_GH0ST</div>
         <nav class="nav-links">
-            <a href="#about">About</a>
-            <a href="#certs">Certifications</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <a href="certifications.html">CERTIFICATIONS</a>
+            <a href="projects.html">PROJECTS</a>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="about">
-        <div class="hero-content">
-            <h1>Andrew Varghese Koshy</h1>
-            <h2>// CERTIFIED ETHICAL HACKER //</h2>
-            <p class="typewriter" id="typewriter"></p>
-            
-            <!-- CEH Badge -->
-            <div class="cert-badge">
-                <img src="assets/images/ceh-badge.png" alt="CEH Certified">
-                <span>EC-Council Certified</span>
+    <main>
+        <!-- About Me Box -->
+        <section class="about-box">
+            <div class="terminal-header">
+                <span class="terminal-btn red"></span>
+                <span class="terminal-btn yellow"></span>
+                <span class="terminal-btn green"></span>
+                <span class="terminal-title">about_me.txt</span>
             </div>
-        </div>
-    </section>
-
-    <!-- Certifications -->
-    <section class="certifications" id="certs">
-        <h2 class="section-title">>_ CREDENTIALS</h2>
-        <div class="cert-grid">
-            <div class="cert-card">
-                <h3>CEH v12</h3>
-                <p>EC-Council</p>
-                <button class="btn-view">VIEW</button>
+            <div class="about-content">
+                <h2>>_ ABOUT ME</h2>
+                <div class="typewriter">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+                    <p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+                    <p>>_ SPECIALTIES:</p>
+                    <ul>
+                        <li>• Ethical Hacking</li>
+                        <li>• Network Security</li>
+                        <li>• Vulnerability Assessment</li>
+                    </ul>
+                </div>
             </div>
-            
-        </div>
-    </section>
-
-    <!-- Projects -->
-    <section class="projects" id="projects">
-        <h2 class="section-title">>_ PROJECT_ARCHIVE</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>NETWORK_PENETRATION</h3>
-                <p>Red team engagement</p>
-                <div class="glitch-overlay"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="contact" id="contact">
-        <h2 class="section-title">>_ CONNECT</h2>
-        <div class="social-links">
-            <a href="#" class="social-icon" data-tooltip="Email">📧</a>
-            <a href="#" class="social-icon" data-tooltip="LinkedIn">🔗</a>
-            <a href="#" class="social-icon" data-tooltip="Instagram">📸</a>
-        </div>
-    </section>
-
-    <!-- Danger Button -->
-    <button id="trap-btn" class="btn-trap">⚠️ DO NOT CLICK ⚠️</button>
-
-    <!-- Crash Screen -->
-    <div id="crash-screen" class="crash-screen">
-        <div class="crash-message">
-            <h1>SYSTEM FAILURE 0xGH0ST</h1>
-            <div class="crash-code"></div>
-        </div>
-    </div>
+            <div class="terminal-footer"></div>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
