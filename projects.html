@@ -4,28 +4,55 @@
     <meta charset="UTF-8">
     <title>My Projects | Andrew Koshy</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Danger Button -->
+    <button id="trap-btn" class="btn-trap">⚠️ DO NOT CLICK ⚠️</button>
+
     <header>
-        <h1>PROJECT ARCHIVE</h1>
-        <nav>
-            <a href="index.html">HOME</a>
+        <div class="logo">CIPHER_GH0ST</div>
+        <nav class="nav-links">
+            <a href="/">HOME</a>
             <a href="certifications.html">CERTIFICATIONS</a>
         </nav>
     </header>
 
     <main>
-        <div class="project-grid">
-            <!-- Project 1 -->
-            <div class="project-card">
-                <img src="assets/projects/pen-test.jpg" alt="Network Penetration">
-                <h2>Corporate Network Penetration</h2>
-                <p>Red team engagement for Fortune 500</p>
-                <button class="btn-details">CASE STUDY</button>
+        <!-- Projects Box -->
+        <section class="project-box">
+            <div class="terminal-header">
+                <span class="terminal-btn red"></span>
+                <span class="terminal-btn yellow"></span>
+                <span class="terminal-btn green"></span>
+                <span class="terminal-title">projects/</span>
             </div>
             
-            <!-- Add more projects here -->
-        </div>
+            <div class="project-content">
+                <h2>>_ PROJECT ARCHIVE</h2>
+                
+                <div class="project-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/projects/pen-test.jpg" alt="Network Penetration">
+                        </div>
+                        <div class="project-details">
+                            <h3>Corporate Network Penetration</h3>
+                            <p>Red team engagement for Fortune 500</p>
+                            <button class="btn-details">CASE STUDY</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="terminal-footer"></div>
+        </section>
     </main>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

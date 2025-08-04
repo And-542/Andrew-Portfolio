@@ -90,3 +90,17 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Your existing code...
 });
+// Initialize particles on all pages
+document.addEventListener('DOMContentLoaded', function() {
+    // Typewriter effect
+    if (document.getElementById("typewriter")) {
+        typeWriter();
+    }
+    
+    // Initialize particles if container exists
+    if (document.getElementById("particles-js") && typeof particlesJS !== 'undefined') {
+        particlesJS.load('particles-js', 'particles-config.json');
+    }
+    
+    // Rest of your existing code...
+});
