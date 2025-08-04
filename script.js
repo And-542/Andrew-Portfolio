@@ -80,3 +80,13 @@ window.addEventListener("click", (e) => {
 document.getElementById('trap-btn').addEventListener('click', function() {
     // ... (keep existing crash screen code)
 });
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize particles
+  if (typeof particlesJS !== 'undefined') {
+    particlesJS.load('particles-js', 'particles-config.json', function() {
+      console.log('Particles loaded!');
+    });
+  }
+  
+  // Your existing code...
+});
