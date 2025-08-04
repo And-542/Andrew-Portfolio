@@ -4,28 +4,102 @@
     <meta charset="UTF-8">
     <title>My Certifications | Andrew Koshy</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Danger Button -->
+    <button id="trap-btn" class="btn-trap">⚠️ DO NOT CLICK ⚠️</button>
+
     <header>
-        <h1>MY CREDENTIALS</h1>
-        <nav>
+        <div class="logo">CIPHER_GH0ST</div>
+        <nav class="nav-links">
             <a href="/">HOME</a>
             <a href="projects.html">PROJECTS</a>
         </nav>
     </header>
 
     <main>
-        <section class="cert-grid">
-            <!-- CEH Certification -->
-            <div class="cert-card">
-                <img src="assets/certs/ceh.png" alt="CEH Certification">
-                <h2>Certified Ethical Hacker</h2>
-                <p>EC-Council | 2023</p>
-                <button class="btn-view">VIEW CREDENTIAL</button>
+        <!-- Certifications Box -->
+        <section class="cert-box">
+            <div class="terminal-header">
+                <span class="terminal-btn red"></span>
+                <span class="terminal-btn yellow"></span>
+                <span class="terminal-btn green"></span>
+                <span class="terminal-title">certifications/</span>
             </div>
             
-            <!-- Add more certs here -->
+            <div class="cert-content">
+                <h2>>_ CREDENTIALS</h2>
+                
+                <!-- CISCO Certification -->
+                <div class="cert-item">
+                    <div class="cert-image">
+                        <img src="assets/Intro to CS - cISCO_page-0001.jpg" alt="CISCO Introduction to Cybersecurity">
+                    </div>
+                    <div class="cert-details">
+                        <h3>CISCO Introduction to Cybersecurity</h3>
+                        <p>CISCO | 2025</p>
+                        <button class="btn-view" data-cert="cisco">VIEW</button>
+                    </div>
+                </div>  
+                
+                <!-- Python Certification -->
+                <div class="cert-item">
+                    <div class="cert-image">
+                        <img src="assets/image.png" alt="Python Certificate">
+                    </div>
+                    <div class="cert-details">
+                        <h3>Python Programming</h3>
+                        <p>Udemy | 2023</p>
+                        <button class="btn-view" data-cert="python">VIEW</button>
+                    </div>
+                </div>
+                
+                <!-- Linux Certification -->
+                <div class="cert-item">
+                    <div class="cert-image">
+                        <img src="assets/Linux Shell Scripting Certificate.jpg" alt="Linux Shell Scripting">
+                    </div>
+                    <div class="cert-details">
+                        <h3>Linux Shell Scripting</h3>
+                        <p>Udemy | 2023</p>
+                        <button class="btn-view" data-cert="linux">VIEW</button>
+                    </div>
+                </div>
+                
+                <!-- CPT Certification -->
+                <div class="cert-item">
+                    <div class="cert-image">
+                        <img src="assets/CPT Certification.jpeg" alt="Certified Penetration Tester">
+                    </div>
+                    <div class="cert-details">
+                        <h3>Certified Penetration Tester</h3>
+                        <p>RedTeam Hackers Academy | 2023</p>
+                        <button class="btn-view" data-cert="cpt">VIEW</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="terminal-footer"></div>
         </section>
     </main>
+
+    <!-- Certificate Modal -->
+    <div id="cert-modal" class="cert-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modal-cert-image" src="" alt="Certificate Full View">
+        </div>
+    </div>
+
+    <!-- Crash Screen -->
+    <div id="crash-screen" class="crash-screen">
+        <div class="crash-message">
+            <h1>SYSTEM FAILURE 0xGH0ST</h1>
+            <div class="crash-code"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
