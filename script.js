@@ -52,3 +52,31 @@ document.getElementById('trap-btn').addEventListener('click', function() {
         crashScreen.style.display = 'none';
     }, 5000);
 });
+// Certificate Modal Functionality
+const modal = document.getElementById("cert-modal");
+const modalImg = document.getElementById("modal-cert-image");
+const closeModal = document.querySelector(".close-modal");
+
+document.querySelectorAll(".btn-view").forEach(btn => {
+    btn.addEventListener("click", function() {
+        const certImage = this.closest(".cert-item").querySelector(".cert-image img");
+        modal.style.display = "block";
+        modalImg.src = certImage.src;
+        modalImg.alt = certImage.alt;
+    });
+});
+
+closeModal.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+});
+
+// Existing danger button code...
+document.getElementById('trap-btn').addEventListener('click', function() {
+    // ... (keep existing crash screen code)
+});
