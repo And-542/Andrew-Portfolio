@@ -14,14 +14,6 @@
     <!-- Danger Button -->
     <button id="trap-btn" class="btn-trap">⚠️ DO NOT CLICK ⚠️</button>
 
-    <!-- Crash Screen -->
-    <div id="crash-screen" class="crash-screen">
-        <div class="crash-message">
-            <h1>SYSTEM FAILURE 0xGH0ST</h1>
-            <div class="crash-code"></div>
-        </div>
-    </div>
-
     <header>
         <div class="logo">CIPHER_GH0ST</div>
         <nav class="nav-links">
@@ -30,68 +22,88 @@
         </nav>
     </header>
 
-    <main>
-        <!-- About Me Box -->
-        <section class="about-box">
+    <main class="about-container">
+        <!-- Introduction Panel -->
+        <section class="about-panel intro-panel">
             <div class="terminal-header">
                 <span class="terminal-btn red"></span>
                 <span class="terminal-btn yellow"></span>
                 <span class="terminal-btn green"></span>
-                <span class="terminal-title">about_me.txt</span>
+                <span class="terminal-title">whoami</span>
             </div>
-            
-            <div class="about-content">
-                <h2>>_ ABOUT ME</h2>
-                
-                <div class="scrollable-content">
-                    <div class="typewriter">
-                        <p>
-                            Hi, I'm <strong>Andrew Varghese Koshy</strong>, an aspiring <strong>Cybersecurity Enthusiast</strong> with a strong foundation in 
-                            <strong>Python</strong>, <strong>React development</strong>, <strong>GitHub version control</strong>, and <strong>Linux Shell Scripting</strong>.
-                        </p>
+            <div class="panel-content">
+                <h2>>_ Andrew Varghese Koshy</h2>
+                <p class="typewriter">Cybersecurity Enthusiast | Python Developer | Security Researcher</p>
+                <div class="neon-divider"></div>
+                <p class="focus-text">Focus: Bridging defensive security with ethical hacking to fortify systems against emerging threats.</p>
+            </div>
+        </section>
 
-                        <p>
-                            Currently expanding my skills in <strong>AI and Machine Learning with PyTorch</strong>, I am passionate about building innovative and 
-                            secure digital solutions.
-                        </p>
-
-                        <p>
-                            I have hands-on internship experience where I developed dynamic web applications and automated system tasks, which enhanced 
-                            my problem-solving and technical skills.
-                        </p>
-
-                        <p>
-                            My interest lies in combining <strong>defensive security operations</strong> with <strong>ethical hacking techniques</strong> to identify 
-                            vulnerabilities and strengthen digital infrastructures against emerging threats.
-                        </p>
-
-                        <p>
-                            I enjoy collaborating in teams, leading projects, and continuously learning new technologies in the cybersecurity space.
-                            With a keen eye for detail, strong communication skills, and a proactive mindset, I aim to contribute to impactful projects 
-                            that push the boundaries of cybersecurity.
-                        </p>
-
-                        <p>>_ SPECIALTIES:</p>
+        <!-- Skills Panel -->
+        <section class="about-panel skills-panel">
+            <div class="terminal-header">
+                <span class="terminal-btn red"></span>
+                <span class="terminal-btn yellow"></span>
+                <span class="terminal-btn green"></span>
+                <span class="terminal-title">skills.sh</span>
+            </div>
+            <div class="panel-content">
+                <h2>>_ CORE COMPETENCIES</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3><span class="neon-arrow">></span> Security</h3>
                         <ul>
-                            <li>• Cybersecurity Fundamentals – Defensive (Blue Team) and Offensive (Ethical Hacking) strategies</li>
-                            <li>• Python Development – Scripting, automation, and backend development</li>
-                            <li>• Version Control with GitHub – Collaborative development and code workflow management</li>
-                            <li>• Linux Shell Scripting – Automating system tasks in Linux environments</li>
-                            <li>• AI/ML Integration (Learning PyTorch) – Applying Machine Learning in cybersecurity</li>
-                            <li>• Problem-Solving & Critical Thinking – Analyzing issues and devising effective solutions</li>
-                            <li>• Teamwork & Leadership – Coordinating projects and leading team collaborations</li>
-                            <li>• Strong Communication & Presentation Skills – Explaining technical concepts clearly</li>
-                            <li>• Adaptability & Quick Learning – Rapidly learning and applying new technologies</li>
+                            <li>• Ethical Hacking</li>
+                            <li>• Vulnerability Assessment</li>
+                            <li>• Network Defense</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3><span class="neon-arrow">></span> Development</h3>
+                        <ul>
+                            <li>• Python Automation</li>
+                            <li>• React Applications</li>
+                            <li>• Shell Scripting</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3><span class="neon-arrow">></span> Operations</h3>
+                        <ul>
+                            <li>• GitHub Workflows</li>
+                            <li>• CI/CD Pipelines</li>
+                            <li>• System Administration</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            
-            <div class="terminal-footer"></div>
+        </section>
+
+        <!-- Experience Panel -->
+        <section class="about-panel experience-panel">
+            <div class="terminal-header">
+                <span class="terminal-btn red"></span>
+                <span class="terminal-btn yellow"></span>
+                <span class="terminal-btn green"></span>
+                <span class="terminal-title">experience.log</span>
+            </div>
+            <div class="panel-content">
+                <h2>>_ PROFESSIONAL JOURNEY</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>Cybersecurity Intern</h3>
+                        <p class="timeline-date">2023 - Present</p>
+                        <p>Developed security automation tools and participated in red team exercises</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Python Developer</h3>
+                        <p class="timeline-date">2022 - 2023</p>
+                        <p>Built backend systems and automation scripts for infrastructure monitoring</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <!-- Scripts - MUST be right before closing body tag -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
