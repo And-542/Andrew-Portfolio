@@ -104,3 +104,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Rest of your existing code...
 });
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize particles if container exists
+    if (document.getElementById('particles-js') && typeof particlesJS !== 'undefined') {
+        particlesJS.load('particles-js', 'particles-config.json', function() {
+            console.log('Particles initialized successfully');
+        });
+    }
+    
+    // Rest of your existing code...
+});
