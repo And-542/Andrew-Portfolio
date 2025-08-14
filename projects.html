@@ -2,94 +2,178 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Projects | Andrew Koshy</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Particle Background -->
     <div id="particles-js"></div>
 
-    <!-- Danger Button -->
-    <button id="trap-btn" class="btn-trap">⚠️ DO NOT CLICK ⚠️</button>
-
-    <!-- Crash Screen -->
-    <div id="crash-screen" class="crash-screen">
-        <div class="crash-message">
-            <h1>SYSTEM FAILURE 0xGH0ST</h1>
-            <div class="crash-code"></div>
-        </div>
-    </div>
 
     <header>
         <div class="logo">CIPHER_GH0ST</div>
         <nav class="nav-links">
-            <a href="index.html">HOME</a>
+            <a href="/">HOME</a>
             <a href="certifications.html">CERTIFICATIONS</a>
         </nav>
     </header>
 
     <main>
-        <!-- Projects Box -->
-        <section class="project-box">
-            <div class="terminal-header">
-                <span class="terminal-btn red"></span>
-                <span class="terminal-btn yellow"></span>
-                <span class="terminal-btn green"></span>
-                <span class="terminal-title">projects/</span>
-            </div>
-            
-            <div class="project-content">
-                <h2>>_ PROJECT ARCHIVE</h2>
-                
-                <div class="project-grid">
-                    <!-- Project 1 -->
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="assets/projects/pen-test.jpg" alt="Network Penetration Test">
-                        </div>
-                        <div class="project-details">
-                            <h3>Corporate Network Penetration</h3>
-                            <p>Red team engagement for Fortune 500 company</p>
-                            <button class="btn-details">VIEW DETAILS</button>
-                        </div>
-                        <div class="glitch-overlay"></div>
-                    </div>
-
-                    <!-- Project 2 -->
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="assets/projects/secure-app.jpg" alt="Secure Application">
-                        </div>
-                        <div class="project-details">
-                            <h3>Secure Web Application</h3>
-                            <p>React-based app with OAuth 2.0 implementation</p>
-                            <button class="btn-details">VIEW DETAILS</button>
-                        </div>
-                        <div class="glitch-overlay"></div>
-                    </div>
-
-                    <!-- Project 3 -->
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="assets/projects/automation.jpg" alt="Automation Script">
-                        </div>
-                        <div class="project-details">
-                            <h3>Security Automation</h3>
-                            <p>Python scripts for vulnerability scanning</p>
-                            <button class="btn-details">VIEW DETAILS</button>
-                        </div>
-                        <div class="glitch-overlay"></div>
-                    </div>
+        <!-- Projects Section -->
+        <section class="projects-section">
+            <div class="section-header">
+                <div class="section-title">PROJECT PORTFOLIO</div>
+                <div class="section-controls">
+                    <span class="section-icon"></span>
+                    <span class="section-icon"></span>
+                    <span class="section-icon"></span>
                 </div>
             </div>
             
-            <div class="terminal-footer"></div>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">ALL</button>
+                <button class="filter-btn" data-filter="cyber">CYBERSECURITY</button>
+                <button class="filter-btn" data-filter="dev">DEVELOPMENT</button>
+            </div>
+
+            <div class="project-grid">
+                <!-- Cybersecurity Project (Case Study) -->
+                <div class="project-card" data-type="cyber">
+                    <div class="project-thumbnail">
+                        <img src="assets/projects/pen-test.jpg" alt="Network Penetration Test">
+                        <div class="project-badge">Case Study</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Corporate Network Penetration Test</h3>
+                        <p class="project-description">Red team engagement identifying critical vulnerabilities in enterprise infrastructure.</p>
+                        <div class="project-tags">
+                            <span class="tag">Penetration Testing</span>
+                            <span class="tag">Vulnerability Assessment</span>
+                        </div>
+                        <button class="btn-details" data-project="corporate-pen-test">
+                            <i class="fas fa-search"></i> View Report
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Development Project (External Link) -->
+                <div class="project-card" data-type="dev">
+                    <div class="project-thumbnail">
+                        <img src="assets/projects/secure-app.jpg" alt="Secure Application">
+                        <div class="project-badge">Live Project</div>
+                        <div class="project-links">
+                            <a href="https://github.com/yourusername/secure-app" target="_blank" class="project-link" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://yourapp.com" target="_blank" class="project-link" aria-label="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Secure Web Application</h3>
+                        <p class="project-description">React-based app with OAuth 2.0 implementation and security headers.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">OAuth</span>
+                            <span class="tag">Security</span>
+                        </div>
+                        <a href="https://yourapp.com" target="_blank" class="btn-visit">
+                            <i class="fas fa-external-link-alt"></i> Visit Project
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cybersecurity Tool -->
+                <div class="project-card" data-type="cyber">
+                    <div class="project-thumbnail">
+                        <img src="assets/projects/automation.jpg" alt="Automation Script">
+                        <div class="project-badge">Open Source</div>
+                        <div class="project-links">
+                            <a href="https://github.com/yourusername/security-automation" target="_blank" class="project-link" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Security Automation Toolkit</h3>
+                        <p class="project-description">Python scripts for automated vulnerability scanning and reporting.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Automation</span>
+                            <span class="tag">Nmap</span>
+                        </div>
+                        <a href="https://github.com/yourusername/security-automation" target="_blank" class="btn-visit">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Development Project -->
+                <div class="project-card" data-type="dev">
+                    <div class="project-thumbnail">
+                        <img src="assets/projects/api-security.jpg" alt="API Security">
+                        <div class="project-badge">Live Project</div>
+                        <div class="project-links">
+                            <a href="https://github.com/yourusername/api-security" target="_blank" class="project-link" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>API Security Gateway</h3>
+                        <p class="project-description">Node.js middleware for API security with rate limiting and JWT validation.</p>
+                        <div class="project-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">JWT</span>
+                            <span class="tag">OWASP</span>
+                        </div>
+                        <a href="https://github.com/yourusername/api-security" target="_blank" class="btn-visit">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
+
+        <!-- Project Detail Modal -->
+        <div id="project-modal" class="project-modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="modal-header">
+                    <h2 id="modal-project-title">Corporate Network Penetration Test</h2>
+                    <div class="modal-badge">Case Study</div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-image">
+                        <img id="modal-project-image" src="" alt="Project Image">
+                    </div>
+                    <div class="modal-details">
+                        <h3>Project Overview</h3>
+                        <p id="modal-project-description"></p>
+                        
+                        <div class="modal-section">
+                            <h3>Key Findings</h3>
+                            <ul id="modal-project-findings"></ul>
+                        </div>
+                        
+                        <div class="modal-section">
+                            <h3>Technologies Used</h3>
+                            <div class="modal-tags" id="modal-project-tags"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-request" id="btn-request-report">
+                        <i class="fas fa-file-pdf"></i> Request Full Report
+                    </button>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>

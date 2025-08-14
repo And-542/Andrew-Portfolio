@@ -4,83 +4,90 @@
     <meta charset="UTF-8">
     <title>My Certifications | Andrew Koshy</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Danger Button -->
-    <button id="trap-btn" class="btn-trap">⚠️ DO NOT CLICK ⚠️</button>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
 
+  
     <header>
         <div class="logo">CIPHER_GH0ST</div>
         <nav class="nav-links">
-            <a href="/">HOME</a>
+            <a href="/index.html">HOME</a>
             <a href="projects.html">PROJECTS</a>
         </nav>
     </header>
 
     <main>
-        <!-- Certifications Box -->
-        <section class="cert-box">
-            <div class="terminal-header">
-                <span class="terminal-btn red"></span>
-                <span class="terminal-btn yellow"></span>
-                <span class="terminal-btn green"></span>
-                <span class="terminal-title">certifications/</span>
+        <!-- Certifications Section -->
+        <section class="cert-section">
+            <div class="section-header">
+                <div class="section-title">CERTIFICATIONS</div>
+                <div class="section-controls">
+                    <span class="section-icon"></span>
+                    <span class="section-icon"></span>
+                    <span class="section-icon"></span>
+                </div>
             </div>
             
-            <div class="cert-content">
-                <h2>>_ CREDENTIALS</h2>
-                
+            <div class="cert-grid">
                 <!-- CISCO Certification -->
-                <div class="cert-item">
-                    <div class="cert-image">
+                <div class="cert-card">
+                    <div class="cert-thumbnail">
                         <img src="assets/Intro to CS - cISCO_page-0001.jpg" alt="CISCO Introduction to Cybersecurity">
+                        <div class="cert-overlay">
+                            <button class="btn-view" data-cert="cisco">VIEW</button>
+                        </div>
                     </div>
-                    <div class="cert-details">
+                    <div class="cert-info">
                         <h3>CISCO Introduction to Cybersecurity</h3>
-                        <p>CISCO | 2025</p>
-                        <button class="btn-view" data-cert="cisco">VIEW</button>
+                        <p class="cert-issuer">CISCO | 2025</p>
                     </div>
-                </div>  
+                </div>
                 
                 <!-- Python Certification -->
-                <div class="cert-item">
-                    <div class="cert-image">
+                <div class="cert-card">
+                    <div class="cert-thumbnail">
                         <img src="assets/image.png" alt="Python Certificate">
+                        <div class="cert-overlay">
+                            <button class="btn-view" data-cert="python">VIEW</button>
+                        </div>
                     </div>
-                    <div class="cert-details">
+                    <div class="cert-info">
                         <h3>Python Programming</h3>
-                        <p>Udemy | 2023</p>
-                        <button class="btn-view" data-cert="python">VIEW</button>
+                        <p class="cert-issuer">Udemy | 2023</p>
                     </div>
                 </div>
                 
                 <!-- Linux Certification -->
-                <div class="cert-item">
-                    <div class="cert-image">
+                <div class="cert-card">
+                    <div class="cert-thumbnail">
                         <img src="assets/Linux Shell Scripting Certificate.jpg" alt="Linux Shell Scripting">
+                        <div class="cert-overlay">
+                            <button class="btn-view" data-cert="linux">VIEW</button>
+                        </div>
                     </div>
-                    <div class="cert-details">
+                    <div class="cert-info">
                         <h3>Linux Shell Scripting</h3>
-                        <p>Udemy | 2023</p>
-                        <button class="btn-view" data-cert="linux">VIEW</button>
+                        <p class="cert-issuer">Udemy | 2023</p>
                     </div>
                 </div>
                 
                 <!-- CPT Certification -->
-                <div class="cert-item">
-                    <div class="cert-image">
+                <div class="cert-card">
+                    <div class="cert-thumbnail">
                         <img src="assets/CPT Certification.jpeg" alt="Certified Penetration Tester">
+                        <div class="cert-overlay">
+                            <button class="btn-view" data-cert="cpt">VIEW</button>
+                        </div>
                     </div>
-                    <div class="cert-details">
+                    <div class="cert-info">
                         <h3>Certified Penetration Tester</h3>
-                        <p>RedTeam Hackers Academy | 2023</p>
-                        <button class="btn-view" data-cert="cpt">VIEW</button>
+                        <p class="cert-issuer">RedTeam Hackers Academy | 2023</p>
                     </div>
                 </div>
             </div>
-            
-            <div class="terminal-footer"></div>
         </section>
     </main>
 
@@ -89,6 +96,9 @@
         <div class="modal-content">
             <span class="close-modal">&times;</span>
             <img id="modal-cert-image" src="" alt="Certificate Full View">
+            <div class="modal-footer">
+                <button class="btn-download">DOWNLOAD</button>
+            </div>
         </div>
     </div>
 
@@ -100,7 +110,6 @@
         </div>
     </div>
 
-    <!-- Added particle.js script as requested -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
