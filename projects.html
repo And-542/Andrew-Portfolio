@@ -15,7 +15,7 @@
     <header>
         <div class="logo">CIPHER_GH0ST</div>
         <nav class="nav-links">
-            <a href="/">HOME</a>
+            <a href="/index.html">HOME</a>
             <a href="certifications.html">CERTIFICATIONS</a>
         </nav>
     </header>
@@ -173,6 +173,18 @@
             </div>
         </div>
     </main>
+    <!-- Certificate Modal (keep this at the bottom of <body>) -->
+    <div id="cert-modal" class="cert-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modal-cert-image" src="" alt="Certificate Full View" class="modal-cert-image">
+            <div class="modal-footer">
+                <button class="btn-download" onclick="downloadCertificate()">
+                    <i class="fas fa-download"></i> DOWNLOAD
+                </button>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>

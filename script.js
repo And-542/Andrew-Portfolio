@@ -15,78 +15,50 @@ const typeWriter = () => {
     type();
 };
 
-// Crash Screen Functionality
-const setupCrashButton = () => {
-    const trapBtn = document.getElementById('trap-btn');
-    if (!trapBtn) return;
-
-    trapBtn.addEventListener('click', () => {
-        const crashScreen = document.getElementById('crash-screen');
-        const crashCode = document.querySelector('.crash-code');
-        
-        crashScreen.style.display = 'flex';
-        crashCode.innerHTML = '';
-        
-        const errorMessages = [
-            ">_ FATAL SYSTEM ERROR",
-            ">_ UNAUTHORIZED ACCESS DETECTED",
-            ">_ INITIATING EMERGENCY SHUTDOWN",
-            ">_ [████████████] 100% CORRUPTED"
-        ];
-        
-        let currentLine = 0;
-        let currentChar = 0;
-        
-        const typeError = () => {
-            if (currentLine < errorMessages.length) {
-                if (currentChar < errorMessages[currentLine].length) {
-                    crashCode.innerHTML += errorMessages[currentLine].charAt(currentChar);
-                    currentChar++;
-                    setTimeout(typeError, 50);
-                } else {
-                    crashCode.innerHTML += '<br>';
-                    currentLine++;
-                    currentChar = 0;
-                    setTimeout(typeError, 200);
-                }
-            }
-        };
-        
-        typeError();
-        
-        setTimeout(() => {
-            crashScreen.style.display = 'none';
-        }, 5000);
-    });
-};
-
 // Certificate Modal Functionality
 const setupCertModals = () => {
     const modal = document.getElementById("cert-modal");
     if (!modal) return;
 
     const modalImg = document.getElementById("modal-cert-image");
-    const closeModal = document.querySelector(".close-modal");
+    const closeBtn = document.querySelector(".close-modal");
 
+    // Open modal when any VIEW button is clicked
     document.querySelectorAll(".btn-view").forEach(btn => {
         btn.addEventListener("click", function() {
-            const certImage = this.closest(".cert-item").querySelector(".cert-image img");
+            const certImage = this.closest(".cert-card").querySelector(".cert-thumbnail img");
             modal.style.display = "block";
             modalImg.src = certImage.src;
             modalImg.alt = certImage.alt;
+            document.body.style.overflow = "hidden"; // Prevent scrolling
         });
     });
 
-    closeModal.addEventListener("click", () => {
+    // Close modal
+    closeBtn.addEventListener("click", () => {
         modal.style.display = "none";
+        document.body.style.overflow = "auto";
     });
 
+    // Close when clicking outside image
     window.addEventListener("click", (e) => {
         if (e.target === modal) {
             modal.style.display = "none";
+            document.body.style.overflow = "auto";
         }
     });
 };
+
+// Download certificate function
+function downloadCertificate() {
+    const imgSrc = document.getElementById("modal-cert-image").src;
+    const link = document.createElement("a");
+    link.href = imgSrc;
+    link.download = "certificate_" + Date.now();
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
 
 // Particle.js Initialization
 const initParticles = () => {
@@ -162,7 +134,6 @@ const initParticles = () => {
 // Main Initialization
 document.addEventListener('DOMContentLoaded', () => {
     typeWriter();
-    setupCrashButton();
     setupCertModals();
     initParticles();
 });
